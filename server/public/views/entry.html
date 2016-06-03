@@ -1,0 +1,23 @@
+<div class="container-fluid" >
+    <div class="row text-center">
+
+        <p class="instructions">Enter your hero information here</p>
+        <div class="col-md-2 col-md-offset-5">
+            <label for="alias">Alias:</label>
+            <input type="text" id="alias" name="alias" ng-model="hero.alias" />
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" ng-model="hero.first_name" />
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" ng-model="hero.last_name" />
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" ng-model="hero.city" />
+
+            <label for="power_name">Choose A Power:</label>
+            <select name="power_name" ng-model="hero.power_name">
+                <option ng-repeat="power in powers" value={{power.power_name}}>{{power.power_name}}</option>
+            </select>
+            <br />
+            <button class="submit btn btn-primary" ng-click="submitHero()">Save Hero</button>
+        </div>
+    </div>
+</div>
